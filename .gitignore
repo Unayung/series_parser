@@ -18,3 +18,4 @@
 /config/config.yml
 /config/database.yml
 /public/uploads
+/public/result.txt

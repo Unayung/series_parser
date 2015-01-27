@@ -1,0 +1,26 @@
+<div id="headerwrap">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>只要貼上劇集頁面的網址<br/>
+        我幫你找下載連結.</h1>
+        <!-- <form class="form-inline" role="form">
+          <div class="form-group">
+            <input type="email" class="form-control form-link-input" id="exampleInputEmail1" placeholder="ex. http://kanmeiju.net/detail/1585.html">
+          </div>
+          <button type="submit" class="btn btn-warning btn-lg">給我 Link</button>
+        </form> -->
+        <%= form_tag(parse_links_path, method: "post", class: "form-inline") do %>
+        <div class="form-group">
+          <%= text_field_tag(:link_url, nil, :placeholder => "ex. http://kanmeiju.net/detail/1585.html", :type => "url", :class => "form-control form-link-input") %>
+        </div>
+        <button type="submit" class="btn btn-warning btn-lg">給我 Link</button>
+        <% end %>
+      </div><!-- /col-lg-6 -->
+      <div class="col-xs-offset-1 col-lg-5">
+        <%= image_tag("ipad-hand.png", :class => "img-responsive") %>
+      </div><!-- /col-lg-6 -->
+
+    </div><!-- /row -->
+  </div><!-- /container -->
+</div><!-- /headerwrap -->

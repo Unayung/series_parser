@@ -1,14 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>SeriesParser</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= Setting.app_name %></title>
+    <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag("application") %>
+    <!-- <link href="assets/main.css" rel="stylesheet"> -->
+    <%= yield :stylesheets %>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <%# render "common/header" %>
+    <%= render "common/navbar" %>
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <%= render :partial => "common/notice_and_alert" %>
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+    <%= render :partial => "common/footer" %>
+    <%= render :partial => "common/bootstrap_modal" %>
+    <%# render :partial => "common/facebook_js" %>
+    <%# render :partial => "common/google_analytics" %>
+    <%= javascript_include_tag "application" %>
+    <%= yield :javascripts %>
+  </body>
 </html>
