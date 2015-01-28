@@ -40,7 +40,6 @@ group :development do
   gem 'capistrano',  '~> 3.1'
   gem 'capistrano-rails', '~> 1.1'
   gem 'capistrano-rvm'
-  gem 'capistrano3-nginx', '~> 2.0'
   gem "quiet_assets"
   gem "better_errors"
   gem "binding_of_caller"
