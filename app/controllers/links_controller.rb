@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
 
-  def parse
+  def parse_link
     if params["link_url"].size > 0
       result = Link.guess_by_url(params["link_url"])
       if result[:result] == "success"

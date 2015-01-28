@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :links do
     collection do
-      post 'parse'
+      post 'parse_link'
     end
   end
   # Example of regular route:
