@@ -49,7 +49,5 @@ namespace :deploy do
       # end
     end
   end
-
+  after 'deploy:publishing', 'deploy:restart'
 end
-
-after 'deploy:finished', 'nginx:restart'
