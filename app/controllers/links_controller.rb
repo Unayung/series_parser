@@ -15,6 +15,7 @@ class LinksController < ApplicationController
   def show
     if params[:id].present? && File.exist?("public/results/#{params[:id]}.txt")
       @f = File.open("public/results/#{params[:id]}.txt")
+      @link = Link.find_by(:parse_result => params[:id])
     else
       redirect_to root_path, :notice => "沒這東西喔大大"
     end
