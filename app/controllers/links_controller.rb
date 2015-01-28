@@ -13,8 +13,8 @@ class LinksController < ApplicationController
   end
 
   def show
-    if params[:id].present? && File.exist?("public/#{params[:id]}.txt")
-      @f = File.open("public/#{params[:id]}.txt")
+    if params[:id].present? && File.exist?("public/results/#{params[:id]}.txt")
+      @f = File.open("public/results/#{params[:id]}.txt")
     else
       redirect_to root_path, :notice => "沒這東西喔大大"
     end
