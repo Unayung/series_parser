@@ -87,6 +87,8 @@ GEM
       capistrano (~> 3.0)
       sshkit (~> 1.2)
     capistrano-stats (1.1.1)
+    capistrano3-nginx (2.0.4)
+      capistrano (>= 3.0.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
     coderay (1.1.0)
@@ -231,6 +233,7 @@ DEPENDENCIES
   capistrano (~> 3.1)
   capistrano-rails (~> 1.1)
   capistrano-rvm
+  capistrano3-nginx (~> 2.0)
   coffee-rails (~> 4.0.0)
   guard-livereload
   jbuilder (~> 2.0)
