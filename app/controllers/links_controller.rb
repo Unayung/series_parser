@@ -1,13 +1,15 @@
 class LinksController < ApplicationController
 
   def parse
-    if !params["link_url"].nil?
+    if params["link_url"].size > 0
       result = Link.guess_by_url(params["link_url"])
       if result[:result] == "success"
         redirect_to link_path(result[:timestamp])
       else
         redirect_to root_path, :alert => "賣鬧"
       end
+    else
+      redirect_to root_path, :alert => "賣鬧"
     end
 
   end
