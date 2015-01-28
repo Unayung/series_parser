@@ -6,10 +6,10 @@ class LinksController < ApplicationController
       if result[:result] == "success"
         redirect_to link_path(result[:timestamp])
       else
-        redirect_to root_path, :alert => "賣鬧"
+        redirect_to root_path, :notice => "賣鬧"
       end
     else
-      redirect_to root_path, :alert => "賣鬧"
+      redirect_to root_path, :notice => "賣鬧"
     end
 
   end
