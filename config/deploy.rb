@@ -1,14 +1,14 @@
 # config valid only for current version of Capistrano
 lock '3.3.5'
 
-set :application, 'serial_parser'
+set :application, 'series_parser'
 set :repo_url, 'git@github.com:Unayung/series_parser.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/apps/serial_parser'
+set :deploy_to, '/home/apps/series_parser'
 
 # Default value for :scm is :git
 # set :scm, :git
