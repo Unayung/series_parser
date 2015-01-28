@@ -7,11 +7,11 @@ class LinksController < ApplicationController
         redirect_to link_path(result[:timestamp])
       else
         flash[:alert] = "賣鬧啦"
-        redirect_to root_path
+        redirect_to :root
       end
     else
       flash[:alert] = "賣鬧啦"
-      redirect_to root_path
+      redirect_to :root
     end
 
   end
@@ -21,7 +21,7 @@ class LinksController < ApplicationController
       @f = File.open("public/results/#{params[:id]}.txt")
       @link = Link.find_by(:parse_result => params[:id])
     else
-      redirect_to root_path, :notice => "沒這東西喔大大"
+      redirect_to :root, :notice => "沒這東西喔大大"
     end
   end
 end
