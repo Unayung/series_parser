@@ -83,6 +83,9 @@ GEM
     capistrano-rails (1.1.2)
       capistrano (~> 3.1)
       capistrano-bundler (~> 1.1)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     capistrano-stats (1.1.1)
     celluloid (0.16.0)
       timers (~> 4.0.0)
@@ -225,7 +228,9 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass (~> 3.3.3)
-  capistrano-rails
+  capistrano (~> 3.1)
+  capistrano-rails (~> 1.1)
+  capistrano-rvm
   coffee-rails (~> 4.0.0)
   guard-livereload
   jbuilder (~> 2.0)

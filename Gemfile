@@ -37,7 +37,9 @@ gem 'settingslogic'
 # Use Capistrano for deployment
 
 group :development do
-  gem 'capistrano-rails'
+  gem 'capistrano',  '~> 3.1'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-rvm'
   gem "quiet_assets"
   gem "better_errors"
   gem "binding_of_caller"
